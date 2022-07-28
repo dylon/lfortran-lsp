@@ -1,6 +1,8 @@
-#lpyth
+# lpyth
 
 VS Code extension for LPython Language.
+
+![demo_lpyth](https://user-images.githubusercontent.com/68434944/181516697-eadb63e5-cbf1-437d-bb5c-f070671dff32.gif)
 
 There are no pre-packaged versions of this extension, but will be packaging the extension to VS Code market place very soon. 
 
@@ -19,7 +21,7 @@ There are no pre-packaged versions of this extension, but will be packaging the 
 
 ## Usage
 
-Compile lpython with LSP flag on (Refer to lpython documentation [https://github.com/lcompilers/lpython#compile-lpython]):
+Compile lpython with LSP flag on (Refer to [lpython documentation](https://github.com/lcompilers/lpython#compile-lpython)):
 
 ```bash
 conda activate lp # or use your environment name here
