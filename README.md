@@ -30,7 +30,7 @@ cmake --build . -j16
 ```
 
 1. Clone https://github.com/ankitaS11/lpyth
-2. Go to: `lpyth/src/server.ts` file and replace the binary path of LPython in line number 103 to your binary path. For example, see: https://github.com/ankitaS11/lpython/blob/lsp/vscode-ts/editor/vscode/lsp-sample/server/src/server.ts#L103
+2. Go to: `lpyth/src/server.ts` file and replace the binary path of LPython in line number 103 to your binary path.
 3. Go to: `lpyth/package.json` file and replace the binary path of LPython in line number 60 to your binary path.
 4. Build the extension:
 
