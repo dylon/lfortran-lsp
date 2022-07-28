@@ -15,9 +15,9 @@ There are no pre-packaged versions of this extension, but will be packaging the 
 
 - The Language Server is written in TypeScript, which uses [Microsoft’s official language server module](https://github.com/microsoft/vscode-languageserver-node). 
 - Communication between the language server and LPython Compiler is done with 
-    `bash
+    ```bash
         const stdout = await runCompiler(text, "<flags>", settings); `
-    `
+    ```
 
 ## Usage
 
