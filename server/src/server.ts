@@ -72,7 +72,7 @@ connection.onInitialize((params: InitializeParams) => {
 			}
 		};
 	}
-	// console.log('LPython language server initialized');
+	// console.log('LFortran language server initialized');
 	return result;
 });
 
@@ -100,7 +100,7 @@ interface ExampleSettings {
 // The global settings, used when the `workspace/configuration` request is not supported by the client.
 // Please note that this is not the case when using this server with the client provided in this example
 // but could happen with other clients.
-const defaultSettings: ExampleSettings = { maxNumberOfProblems: 1000, compiler: { executablePath: "/home/ankita/Documents/Internships/GSI/tmp/lpython/src/bin/lpython" } };
+const defaultSettings: ExampleSettings = { maxNumberOfProblems: 1000, compiler: { executablePath: "/home/dylon/Workspace/lcompilers/lfortran/src/bin/lfortran" } };
 let globalSettings: ExampleSettings = defaultSettings;
 
 // Cache the settings of all open documents
@@ -112,7 +112,7 @@ connection.onDocumentSymbol(async (request) => {
 	const text = document?.getText();
 	const symbols: SymbolInformation[] = [];
 	if (typeof text == "string") {
-		const stdout = await runCompiler(text, "--show-documentSymbols ", settings);
+		const stdout = await runCompiler(text, "--show-document-symbols ", settings);
 		const obj = JSON.parse(stdout);
 		for (let i=0; i<obj.length; i++) {
 			if (obj[i].location) {
@@ -143,7 +143,7 @@ connection.onDidChangeConfiguration(change => {
 		documentSettings.clear();
 	} else {
 		globalSettings = <ExampleSettings>(
-			(change.settings.LPythonLanguageServer || defaultSettings)
+			(change.settings.LFortranLanguageServer || defaultSettings)
 		);
 	}
 
@@ -160,7 +160,7 @@ function getDocumentSettings(resource: string): Thenable<ExampleSettings> {
 	if (!result) {
 		result = connection.workspace.getConfiguration({
 			scopeUri: resource,
-			section: 'LPythonLanguageServer'
+			section: 'LFortranLanguageServer'
 		});
 		documentSettings.set(resource, result);
 	}
@@ -257,7 +257,7 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 				end: Position.create(obj.diagnostics[0].range.end.line, obj.diagnostics[0].range.end.character),
 			},
 			message: obj.diagnostics[0].message,
-			source: "lpyth"
+			source: "lfortran-lsp"
 		};
 		diagnostics.push(diagnostic);
 	}

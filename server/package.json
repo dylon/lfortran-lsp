@@ -1,15 +1,15 @@
 {
-	"name": "lpyth-server",
-	"description": "Example implementation of a language server in node.",
+	"name": "lfortran-lsp-server",
+	"description": "LFortran LSP server.",
 	"version": "1.0.0",
-	"author": "Microsoft Corporation",
+	"author": "LCompilers",
 	"license": "MIT",
 	"engines": {
 		"node": "*"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Microsoft/vscode-extension-samples"
+		"url": "https://github.com/dylon/lfortran-lsp"
 	},
 	"dependencies": {
 		"vscode-languageserver": "^7.0.0",

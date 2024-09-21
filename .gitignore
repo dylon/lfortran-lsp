@@ -1,0 +1,19 @@
+# Excluded everything by default
+*
+
+# Whitelist directories so file patterns may be included
+!*/
+
+# Include specific file patterns
+!/client/package.json
+!/client/src/*.ts
+!/client/testFixture/*.txt
+!/client/tsconfig.json
+!/.gitignore
+!/package.json
+!/README.md
+!/scripts/*.sh
+!/server/package.json
+!/server/src/*.ts
+!/server/tsconfig.json
+!/tsconfig.json
