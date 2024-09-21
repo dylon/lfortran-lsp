@@ -38,7 +38,7 @@ cmake --build . -j8
 2. Go to: `lfortran-lsp/src/server.ts` file and replace the binary path of LFortran in
    line number 103 to your binary path.
 3. Go to: `lfortran-lsp/package.json` file and replace the binary path of LFortran in
-   line number 60 to your binary path.
+   line number 61 to your binary path.
 4. Build the extension:
 
 ```bash
